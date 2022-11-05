@@ -17,7 +17,7 @@ public:
     QuadTree();
     ~QuadTree();
     void insert(int x, int y, T value);
-    void search(int t_x, int t_y, int b_x, int b_y);          // pendiente busqueda por rango
+    void search(int t_x, int t_y, int b_x, int b_y);          // busqueda por rango
     void search(Node<T>* N, int t_x, int t_y, int b_x, int b_y);
     void search(int x, int y);
     void graph(std::string dir);
@@ -94,13 +94,13 @@ void QuadTree<T>::insert(int x, int y, T value)
 }
 
 template<typename T>
-void QuadTree<T>::search(int t_x, int t_y, int b_x, int b_y)          // pendiente busqueda por rango
+void QuadTree<T>::search(int t_x, int t_y, int b_x, int b_y)          // busqueda por rango
 {
     search(root, t_x, t_y, b_x, b_y);
 }
 
 template<typename T>
-void QuadTree<T>::search(Node<T>* N, int t_x, int t_y, int b_x, int b_y)          // pendiente busqueda por rango
+void QuadTree<T>::search(Node<T>* N, int t_x, int t_y, int b_x, int b_y)          // busqueda por rango
 {
     if(!N)
         return;
